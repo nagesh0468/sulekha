@@ -1,0 +1,832 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+.box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* flex-wrap: wrap; */
+}
+.main{
+    width: 100%;
+    height: max-content;
+    position: relative;
+}
+#h-container, .h-container{
+    width: 100%;
+    height: 60px;
+}
+
+.h-container{
+    justify-content: space-between;
+    box-shadow: 5px 0px 15px rgba(0, 0, 0, 0.5) ;
+    background: #fff;
+}
+#h-container{
+   position: fixed;
+   top: 0%;
+   z-index: 10;
+}
+.logo{
+    width: 15%;
+    height: 50px;
+    padding-top: 15px;
+    padding-left: 8px;
+    position: relative;
+    z-index: 10;
+   
+}
+
+.logo_img{
+    width: 80%;
+    height: 48px;
+    background: url('/Frented/images/sulekha-logo.png');
+    background-repeat: no-repeat;
+   cursor: pointer;
+}
+.nav_list{
+    width: 35%;
+    height: 50px;
+}
+.lists{
+    width: 95%;
+    height: 48px;
+    list-style: none;
+    justify-content: space-around;
+
+}
+.lists a{
+    text-decoration: none;
+    font-size: 16px;
+    color: #4d4c4c;
+}
+.drop{
+    width: max-content;
+    height: max-content;
+    padding: 10px;
+    cursor: pointer;
+}
+.drop .fa-angle-down{
+    margin-left: 10px;
+}
+.settings{
+    position: absolute;
+    right: 10px;
+    top: 50px;
+    background-color: #fff;
+    padding: 10px;
+    list-style: none;
+    border-radius: 8px;
+    display: block;
+}
+.settings li{
+    padding: 5px;
+}
+.toggle{
+    display: none;
+}
+
+ .country_list{
+    position: absolute;
+    width: 65%;
+    height: 120px;
+    background: #fff;
+    left: 20px;
+    top: 50px;
+    display: none;
+}
+.c_lists{
+    list-style: none;
+    flex-direction: column;
+}
+.c_lists img{
+    margin-left: 5px;
+}
+.c_lists li{
+    margin-bottom: 8px;
+}
+.logo:hover .country_list{
+    display: block;
+}
+#banner{
+    width: 100%;
+    height: 440px;
+    position: relative;
+   
+}
+.banner_bg{
+    position: absolute;
+    background: rgba(0, 0, 0, 0.35) url('/Frented/images/banner.jpg');
+    width: 100%;
+    height: 440px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: -350px -5px;
+    background-blend-mode: darken;  
+    position: absolute;
+    top: 60px;
+}
+.bg_content{
+    width: 70%;
+    height: 150px;
+    flex-direction: column;
+    justify-content: space-between;
+ 
+}
+.text{
+    width: 100%;
+    height: 85px;
+}
+.bg_text{
+    font-size: 35px;
+    font-weight: 600;
+    color: #fff;
+}
+.search{
+    width: 80%;
+    height: 60px;
+    justify-content: space-evenly;
+
+}   
+.city{
+    width: 24.5%;
+    height: 60px;
+}
+.city_list{
+    height: 100px;
+    overflow-y: scroll;
+    list-style: none;
+    background: #fff;
+    margin-top: 2px;
+    flex-direction: column;
+    align-items: start;
+    padding: 5px;
+    
+}
+.city_list li{
+   padding:3px;
+   font-size: 18px;
+   color: #898b8d;
+   cursor: pointer;
+}
+
+.services{
+    width: 55%;
+    height: 60px;
+}
+.bg_btn{
+    width: 20%;
+    height: 60px;
+}
+input{
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+input:focus{
+    outline: none;
+}
+
+.btn{
+    background-color: red;
+    font-size: 16px;
+    font-weight: 600;
+    color: #fff;
+}
+.inp{
+    padding-left: 25px;
+}
+#users{
+    width: 100%;
+    height: 200px;
+    position: relative;
+
+}
+.users{
+    width: 60%;
+    height: 140px;
+    position: absolute;
+    top: 50px;
+}
+.user{
+    width: 25%;
+    height: 200px;
+   flex-direction: column;
+}
+.user h2{
+    margin-bottom: 5px;
+}
+#categories{
+    width: 100%;
+    height: 150px;
+}
+.categories{
+    width: 100%;
+    height: 150px;
+    column-gap: 0.5px;
+}
+.category{
+    width: 12%;
+    height: 145px;
+    flex-direction: column;
+}
+.c_img{
+    width: 100%;
+    height: 95px;
+    transition: ease-in-out 0.5s;
+    cursor: pointer;
+}
+.c_title{
+    width: 100%;
+    height: 50px;
+}
+.c_img:hover{
+    transform: scaleY(1.08);
+  
+}
+#types{
+    width: 100%;
+    height: max-content;
+    background: #e2e0e0;
+}
+.type{
+    width: 100%;
+    height: 300px;
+    flex-direction: column;
+}
+.t_title{
+    width: 100%;
+    height: 60px;
+    justify-content: flex-start;
+   
+}
+.t_title h1{
+    margin-left: 35px;
+}
+.slider{
+    width: 100%;
+    height: 240px;
+    justify-content: space-evenly;
+}
+.card{
+    width: 22%;
+    height: 240px;
+    border-radius: 8px;
+    overflow: hidden;
+    background: #fff;
+    box-shadow: 2px 2px 2px rgba(0,0,0,0.5);
+    
+}
+.c_img_{
+    width: 100%;
+    height: 60%;
+    transition: ease-in-out 0.5s;
+    cursor: pointer;
+}
+.c_img_:hover{
+    transform: scale(1.1);
+}
+.c_content{
+    width: 100%;
+    height: 40%;
+    padding: 5px 10px 10px 10px;
+}
+.c_btn{
+    justify-content: space-between;
+
+}
+.c_btn .btn_{
+    padding: 5px 10px;
+    font-size: 14px;
+    font-weight: 700;
+    color: red;
+    cursor: pointer;
+    transition: 0.5s;
+    border: none;
+    border-radius: 8px;
+    
+}
+.btn_:hover{
+    transform: scale(1.05);
+    box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+#albume{
+    width: 100%;
+    height: 400px;
+    padding: 10px;
+    background: #c5d2d3;
+}
+.albume{
+    width: 100%;
+    height: 380px;
+    padding: 10px;
+}
+.row{
+    width: 100%;
+    height: 360px;
+    column-gap: 1.5%;
+}
+.col_1{
+    width: 48%;
+    height: 100%;
+    background-blend-mode: darken;
+   
+   
+}
+.img1{
+    background: rgba(0, 0, 0, 0.5) url('/Frented/images/wedding-services.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 30% 50%;
+}
+.img2{
+    background: rgba(0, 0, 0, 0.5) url('/Frented/images/img2.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 30% 50%;
+}
+.in_box{
+    width: 95%;
+    height: 95%;
+    /* padding: 10px 10px 10px 10px; */
+    color: #fff;
+    flex-direction: column;
+    row-gap: 10px;
+}
+.con{
+    width: 70%;
+    padding: 5px;
+}
+.yellow{
+    color: yellow;
+}
+.con button{
+    padding: 10px 15px;
+    font-size: 16px;
+    font-weight: 600;
+    color: red;
+    cursor: pointer;
+}
+#study{
+    width: 100%;
+    height: 250px;
+}
+.study{
+    width: 100%;
+    height: 250px;
+    flex-direction: column;
+}
+.s_title{
+    padding: 5px;
+    font-size: 20px;
+}
+.s_para{
+    padding: 5px;
+    font-size: 20px;
+    color: #646262;
+}
+.s_cards{
+    width: 100%;
+    height: 170px;
+    padding: 10px;
+    column-gap: 1%;
+}
+.s_card{
+    width: 12%;
+    height: 120px;
+    background: #fff;
+    border-radius: 8px;
+    border: 0.5px solid #bbb8b9;
+    cursor: pointer;
+    padding: 5px;
+}
+.s_img{
+    width: 100%;
+    height: 80%;
+    transition: ease-in-out 0.5s;
+}
+.s_card .s_img:hover{
+    transform: scale(0.9);
+}
+.s_name{
+    width: 100%;
+    height: 15%;
+    font-size: 16px;
+}
+.s_name p{
+    margin-left: 25px;
+}
+.s_round{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #4d4c4c;
+}
+.m_round{
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+}
+#blog_container{
+    width: 100%;
+    height: max-content;
+}
+.blog_container{
+    width: 100%;
+    height: max-content;
+    flex-direction: column;
+}
+.blogs{
+    width: 100%;
+    height: max-content;
+    column-gap: 2%;
+}
+.b_cards{
+    width: 23%;
+    height: max-content;
+}
+.b_card{
+    width: 100%;
+    height: 250px;
+    background-color: rgb(80, 128, 136);
+}
+.profile{
+    width: 100%;
+    height: 35px;
+    justify-content: start;
+    padding: 0 10px;
+}
+.fa-user{
+    margin-right: 10px;
+}
+.b_title{
+    width: 100%;
+    height: 80px;
+    padding: 0 10px;
+    cursor: pointer;
+}
+.b_content{
+    width: 100%;
+    height: 150px;
+    padding: 0 10px;
+    text-align: justify;
+}
+.b_button{
+    width: 100%;
+    height: 70px;
+    padding: 0 10px;
+}
+.b_button button{
+    width: 100%;
+    padding: 10px 0;
+    color: red;
+    border: 1px solid rgb(211, 209, 209);
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: ease-in-out 0.5ms;
+}
+.b_button button:hover{
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+}
+#review{
+    width: 100%;
+    height: max-content;
+}
+.review{
+    width: 100%;
+    height: max-content;
+    padding: 35px 0;
+    flex-direction: column;
+    background: #ebecec;
+}
+.re_title{
+    width: 100%;
+    height: 80px;
+}
+.re_title p{
+    font-size: 30px;
+    font-weight: 600;
+}
+/* .search{
+    width: 100%;
+    height: 60px;
+} */
+.re_search{
+    padding: 18px 15px ;
+    border: 1px solid #939aa0;
+}
+
+
+.re_cards{
+    width: 23%;
+    height: max-content;
+    padding-bottom: 40px;
+    border-radius: 5px;
+    padding: 5px; 
+    background: #fff; 
+    position: relative;
+}
+.re_cards:hover{
+    box-shadow: -2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+.icon{
+    width: 100%;
+    height: 60px;
+}
+.re_title_u{
+    width: 100%;
+    height: 30px;
+}
+.re_title_u p{
+    font-size: 22px;
+    font-weight: 600;
+}
+.update{
+    width: 100%;
+    height: 20px;
+}
+.update p{
+    font-size: 16px;
+    font-weight: 400;
+    color: #202020;
+}
+.re_title_2{
+    width: 100%;
+    height: 50px;
+}
+.place{
+    width: 100%;
+    height: 15px;
+}
+.place p{
+    font-size: 14px;
+    color: #807b7c;
+}
+.address{
+    width: 100%;
+    height: 100px;
+    flex-direction: column;
+}
+.address p{
+    font-size: 20px;
+    font-weight: 600;
+    color: red;
+}
+
+.re_button{
+    width: 100%;
+    height: 50px;
+}
+.re_button p{
+    color: red;
+}
+.re_container{
+    width: 100%;
+    height: max-content;
+    column-gap: 2%;
+    padding: 15px 0;
+}
+.fa-regular{
+    font-size: 25px;
+}
+.re_title_2 p{
+    font-size: 22px;
+    color: red;
+    font-weight: 600;
+}
+.rate{
+    width: 35px;
+    height: 25px;
+    background: green;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+.rate span{
+    color: #fff;
+}
+.footer{
+    width: 100%;
+    height: max-content;
+}
+.f_cards{
+    width: 100%;
+    height: max-content;
+    flex-direction: column;
+}
+.f_card{
+    width: 100%;
+    height: max-content;
+    padding-left: 25px;
+}
+.f_title{
+    width: 100%;
+    height: 40px;
+    justify-content: start;
+}
+.f_type{
+    width: 100%;
+    height: max-content;
+    padding: 5px;
+}
+.f_type span{
+    margin-right: 15px;
+    cursor: pointer;
+    color: #898b8d;
+}
+.f_coty{
+    width: 100%;
+    height: max-content;
+    padding: 25px;
+    color: #898b8d;
+    justify-content: start;
+}
+.scocial{
+    width: 30px;
+    height: 30px;
+    border-radius: 50px;
+    border: 1px solid #898b8d;
+    display: inline-block;
+    margin-left: 10px;
+}
+.scocial i{
+    margin-left: 6px;
+    margin-top: 6px;
+}
+.sign{
+    width: 100%;
+    height: 100vh;
+    align-items: start;
+    background: #f1f1f1;
+}
+.signContainer{
+    width: 30%;
+    height: max-content;
+    border-radius: 8px;
+    position: absolute;
+    top: 80px;
+    background-color: #fff;
+    padding: 10px;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+}
+.top{
+    width: 100%;
+    height: 50px;
+    justify-content: space-between;
+    padding: 0 15px;
+}
+.top h4{
+    font-size: 22px;
+    color: #4d4c4c;
+}
+.top a{
+    text-decoration: none;
+    color: blue;
+    font-size: 18px;
+}
+.input{
+    width: 95%;
+    height: 60px;
+    padding: 0 15px;
+}
+.input p{
+    font-weight: 600;
+    margin-top: 10px;
+}
+.input input{
+    border: 1px solid #4d4c4c;
+    padding: 10px 0;
+}
+.checkbox{
+    width: 100%;
+    height: 40px;
+    justify-content: start;
+}
+.checkbox input{
+    width: 15px;
+    height: 15px;
+    margin: 0 10px;
+}
+.checkbox span{
+    font-size: 14px;
+    color: #807b7c;
+}
+.sign_botton{
+    width: 100%;
+    height: 40px;
+    padding: 0 10px;
+    justify-content: start;
+    column-gap: 10px;
+}
+.sign_botton button{
+    padding: 6px 10px;
+    font-size: 18px;
+    font-weight: 500;
+    color: #fff;
+    background: red;
+    border: none;
+    cursor: pointer;
+}
+.sign_botton a{
+    text-decoration: none;
+    font-size: 18px;
+    color: blue;
+}
+.college{
+    width: 100%;
+    height: 100vh;
+    background: #f3e1c2;
+}
+.c_container{
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+}
+.c_title{
+    width: 100%;
+    height: 60px;
+}
+.c_title h1{
+    font-size: 32px;
+}
+.c_form{
+    padding: 5px 10px;
+    width: 60%;
+    height: 70%;
+    background: #fff;
+    border-radius: 15px;
+}
+.f_head{
+    width: 100%;
+    height: 40px;
+    justify-content: space-between;
+}
+.fa-magnifying-glass{
+    font-size: 20px;
+    margin-right: 25px;
+}
+.radio_row{
+    width: 100%;
+    height: 180px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    row-gap: 10px;
+    overflow-y: scroll;
+}
+.select_radio{
+    width: 45%;
+    height: 50px;
+    justify-content: start;
+    padding: 0 10px;
+    border: 2px solid #d3d0d0;
+}
+.f_check{
+    width: 40px;
+    height: 40px;
+   
+}
+.f_check input[type="checkbox"]{
+    width: 20px;
+    height: 20px;
+    border: 5px solid #7e2929;
+    cursor: pointer;
+}
+.ans{
+    width: 90%;
+    height: max-content;
+    padding: 0 10px;
+}
+.ans p{
+    font-size: 17px;
+    margin-left: 5px;
+}
+.f_btn{
+    width: 100%;
+    height: 80px;
+}
+.f_btn button{
+    width: 80%;
+    height: 50px;
+    font-size: 18px;
+    font-weight: 600;
+    color: #fff;
+    background: rgba(230, 32, 6, 0.822);
+    border: none;
+    cursor: pointer;
+}
+.newContainer{
+    width: 100%;
+    height: 60px;
+    background-color: red;
+  }
+  @media only screen and (max-width: 576px) {
+    .user{
+        width: 100%;
+    }
+  }
